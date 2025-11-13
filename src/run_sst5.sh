@@ -26,6 +26,8 @@
 # Exit on any error
 set -e
 
+# HF_TOKEN is set in ~/.bashrc
+
 export MAMBA_ROOT_PREFIX="/scratch/cs529314/micromamba"
 MM="/scratch/cs529314/micromamba/bin/micromamba"
 eval "$("$MM" shell hook -s bash)"
