@@ -69,7 +69,7 @@ def run_inference_with_explanation():
 
     # Using a smaller subset for demonstration to run faster.
     # To run on the full dataset, remove the slicing [:50].
-    for example in test_dataset.select(range(50)):
+    for example in test_dataset.select(range(10)):
         text = example["text"]
         true_label_name = example["label_text"]
 
@@ -110,11 +110,11 @@ def run_inference_with_explanation():
 
 def save_results_to_csv(results, filename="llm_sst_results.csv"):
     """
-    Save the inference results to a CSV file.
+    Save the inference results to a CSV file using pipe separator.
     """
     with open(filename, "w", newline="", encoding="utf-8") as csvfile:
         fieldnames = ["text", "true_label", "predicted_label", "reason", "correct"]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter="|")
 
         writer.writeheader()
         for result in results:
