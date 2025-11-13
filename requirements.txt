@@ -1,0 +1,10 @@
+torch
+numpy
+nltk
+datasets
+matplotlib
+pydantic
+transformers
+outlines
+typing
+scikit-learn

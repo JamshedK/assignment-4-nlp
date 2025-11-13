@@ -1,0 +1,7 @@
+glove.6B.50d-subset.txt
+glove.6B.300d-subset.txt
+
+__pycache__/
+.vscode/
+.ipynb_checkpoints/
+.DS_Store
